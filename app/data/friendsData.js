@@ -1,9 +1,4 @@
-// ===============================================================================
-// DATA
-// Below data will hold all friends.
-// ===============================================================================
-//note: i'm a lazy developer and took the data from the heroku demo site.
-//giving credit here to trilogy developer for data, thanks :)
+
 
 
 var friendsData = [
