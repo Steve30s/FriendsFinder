@@ -1,6 +1,10 @@
-var friends = require("../Data/friends.js");
+// ===============================================================================
+// LOAD DATA
+// We are linking our routes to a series of "data" sources.
+// These data sources hold arrays of information on friendsData
+// ===============================================================================
 
-
+var friendsData = require("../data/friendsData");
 
 // ===============================================================================
 // ROUTING
@@ -8,31 +12,16 @@ var friends = require("../Data/friends.js");
 
 module.exports = function(app) {
   // API GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases when a user visits a link
-  // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-  // ---------------------------------------------------------------------------
-
+  // allow developer to access friends data.
   app.get("/api/friends", function(req, res) {
-    res.json(tableData);
+    res.json(friendsData);
   });
-
-  // API POST Requests
-  // Below code handles when a user submits a form and thus submits data to the server.
-  // In each of the below cases, when a user submits form data (a JSON object)
-  // ...the JSON is pushed to the appropriate Javascript array
-  // (ex. User fills out a reservation request... this data is then sent to the server...
-  // Then the server saves the data to the tableData array)
-  // ---------------------------------------------------------------------------
-
+  //POST new friend and push to freindData array.
   app.post("/api/friends", function(req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
     var newFriend = req.body;
-
-  data.friends.push(newFriend);
-
-  res.json(data.friends);
-
+    // pushing body data onto the friendsData array.
+  	friendsData.push(newFriend); 
+  	//must respond, if you dont, the browswer will just hang until it times out.
+  	res.json(friendsData);
   });
-}
+};

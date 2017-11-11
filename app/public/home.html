@@ -1,23 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Survey</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Friend Finder</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!--Include your controller logic here-->
+  <script type="text/javascript" src="controller.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-
-	<!-- Title and button/link to the survey page -->
-	<div class="container jumbotron">
-		<h1>Finding a Friend</h1>
-		<h3>Answer some question, then find a friend.</h3>
-		<a href="/survey" <button class="btn btn-primary btn-lg">Take the survey</button></a>
-	</div>
-
-	<!-- Links to different part of this webpage -->
-	<div class="container">
-		<a href="/api/friends">API Friends List</a> <a href="#">GitHub Repo</a>
-	</div>
-
+  <div class="container">
+    <div class="jumbotron">
+      <h1>
+        <span class="glyphicon glyphicon-heart"></span>
+        Friend Finder
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="jumbotron">
+      <h2>
+        Answer a few basic questions.
+      </h2>
+      <h2>
+        Then find the friend with the greatest compatability!
+      </h2>
+    </div>
+    <a href="/survey">
+      <button type="submit" class="btn btn-primary">
+        <span class="glyphicon glyphicon-list-alt"></span>
+        Go to survey.
+      </button> 
+    </a> 
+    <footer class="footer">
+      <a href="/api/friends" id="apiFriend">API Friends List</a>
+    </footer>
+  </div> 
 </body>
 </html>

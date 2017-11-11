@@ -1,25 +1,17 @@
 {
-  "name": "friendsfinder",
+  "name": "friendfinder",
   "version": "1.0.0",
-  "description": "App to find friends ",
-  "main": "server.js",
+  "description": "Week of 13 HW",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Steve30s/FriendsFinder.git"
-  },
-  "author": "Steve",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Steve30s/FriendsFinder/issues"
-  },
-  "homepage": "https://github.com/Steve30s/FriendsFinder#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
     "path": "^0.12.7"
   }
 }
